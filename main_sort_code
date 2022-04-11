@@ -1,17 +1,13 @@
-import random,time
+import random, time
 from bubblesort import bubblesort
 numbers = []
 
-for i in range(1,10):
+for i in range(1, 100):
     x = random.randrange(0, 1000000)
-    numbers.insert(i,x)
+    numbers.insert(i, x)
 
 print(numbers)
 
-start=time.time()
+bubblesort(numbers, time)
 
-bubblesort(numbers)
-
-end=time.time()
-print(end-start)
 print(numbers)
