@@ -1,5 +1,5 @@
 def bubblesort(numbers_un, time):
-    numbers = numbers_un
+    numbers = numbers_un.copy()
 
     start = time()
 
