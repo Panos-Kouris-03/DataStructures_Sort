@@ -4,7 +4,8 @@ from selection import selection
 numbers = []
 
 for i in range(100, 1100, 100):
-    
+    x = random.randrange(0, 1000000)
+    numbers.insert(i, x)       
 
 print(numbers)
 
