@@ -1,6 +1,9 @@
 from random import randrange
 from time import time
-from bubblesort import bubblesort, quickshort
+from sorts import bubblesort, shell_sort, bubblesort_number_sorting
+
+time_bubblesort = 0
+time_shell_sort = 0
 
 for j in range(100, 1100, 100):
 
@@ -15,8 +18,14 @@ for j in range(100, 1100, 100):
     print("senario:", j/100)
     print("Unsorted Array", numbers_unsorted, "\n")
 
-    numbers_sorted = bubblesort(numbers_unsorted, time), quickshort(numbers_unsorted,time)
+    numbers_sorted = bubblesort_number_sorting(numbers_unsorted)
+    
+    time = bubblesort(numbers_unsorted)
+    time_bubblesort+=time
+    print("\ntime for bubblesort: ", time, "\n")
+    
+    time = shell_sort(numbers_unsorted)
+    time_shell_sort+=time
+    print("\ntime for shell sort: ", time, "\n")
 
-
-    print("unSorted:", numbers_unsorted, "\n")
     print("Sorted:", numbers_sorted, "\n")
